@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <h3>姓名：{{name}}</h3>
+      <h3>年龄：{{more.age}}</h3>
+      输入姓名：<input type="text" v-model="name">
+      <br>
+      输入年龄：<input type="text" v-model="more.age">
+    </div>
+    <!-- 引入自己的vue.js文件 -->
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          name: '张三',
+          more: {
+            age: 18
+          }
+        }
+      })
+      console.log(vm);
+    </script>
+</body>
+</html>
